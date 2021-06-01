@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Fondamento&family=Julius+Sans+One&family=Nova+Mono&family=Oleo+Script&display=swap");
+* {
+  font-family: "Fondamento", cursive;
+  font-family: "Julius Sans One", sans-serif;
+  font-family: "Nova Mono", monospace;
+  font-family: "Oleo Script", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.8);
+  flex-direction: column;
+  margin: 100px auto;
+  width: 350px;
+  align-items: center;
+  text-shadow: 1px 1px 50px #fff, 1px 1px 5px rgb(255, 42, 227);
+  color: rgb(255, 42, 227);
+  border-radius: 2rem;
+  padding: 30px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.9);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  margin: 10px;
+  background-color: rgba(0, 0, 0);
+  color: white;
+  border-radius: 1rem;
+  padding: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.FormDiv h2 {
+  margin-top: 50px;
+  font-size: 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  text-shadow: 1px 1px 40px #fff, 1px 1px 10px rgb(42, 212, 255);
+}
+.RegisterSubmitButton {
+  padding: 10px;
+  border-radius: 2.5em;
+}
+.RegisterSubmitButton:hover {
+  background-color: rgba(164, 234, 252, 0.8);
+}
+.HomePage {
+  background-color: rgb(42, 212, 255);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.UserPage {
+  background-color: rgb(240, 175, 234);
+  width: 300px;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 1.4em;
+  box-shadow: 0px 0px 30px rgba(240, 175, 234, 0.9);
+  align-content: center;
+  flex: auto;
+  flex-direction: column;
+}
+.SocialMediaFeed {
+  background-color: black;
+  width: 700px;
+  margin: auto;
+  margin-top: 0px;
+  border-radius: 1.5em;
+}
+img {
+  border: solid 1px black;
+  border-radius: 55%;
+  width: 130px;
+}
+.SMFormDiv {
+  margin-top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.SMForm {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
