@@ -6,11 +6,12 @@ export default class SocialMediaFeed extends Component {
   render() {
     return (
       <div className="SocialMediaFeed">
-        <h2>socialmediafeed</h2>
+        <h2>Feed me</h2>
         <SMForm user={this.props.user} addPost={this.props.addPost} />
         <SocialMediaContainer
           user={this.props.user}
-          SMPost={this.props.SMPost}
+          SMPosts={this.props.SMPosts}
+          addLike={this.props.addLike}
         />
       </div>
     );

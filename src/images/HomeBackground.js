@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 let cols;
 let rows;
-let scl = 15;
+let scl = 10;
 let xoff = 0;
 
 let yoff = 0;
@@ -25,8 +25,8 @@ export default function Background() {
     p5.background(200, 200, 250);
     p5.stroke(20, 20, 255);
     // p5.noFill();
-    p5.rotateX(p5.sin(p5.PI));
-    p5.rotateY(p5.cos(p5.PI / 2));
+    p5.rotateX(p5.sin(p5.PI / 3));
+    p5.rotateY(p5.cos(p5.PI / 3));
     p5.translate(-p5.windowWidth / 2, -p5.windowHeight / 2);
     for (let y = 0; y < rows; y++) {
       p5.beginShape(p5.TRIANGLE_STRIP);
@@ -45,7 +45,7 @@ export default function Background() {
         yoff -= 0.8;
       }
       xoff += 0.5;
-      scl += 0.0002;
+      scl += 0.0003;
       p5.endShape();
     }
   };

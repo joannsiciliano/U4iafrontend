@@ -3,9 +3,11 @@ import SocialMediaPost from "./SocialMediaPost";
 
 export default function SocialMediaContainer(props) {
   const displayPosts = () => {
-    return props.SMPost.map((smp) => {
+    return props.SMPosts.map((smp) => {
       console.log(smp);
-      return <SocialMediaPost user={props.user} />;
+      return (
+        <SocialMediaPost user={props.user} post={smp} addLike={props.addLike} />
+      );
     });
   };
 

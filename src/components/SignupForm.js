@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Background from "../images/Background";
+import { Link } from "react-router-dom";
 
 export default class SignupForm extends Component {
   state = {
@@ -8,7 +9,7 @@ export default class SignupForm extends Component {
   };
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: [e.target.value],
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -21,29 +22,32 @@ export default class SignupForm extends Component {
     return (
       <div className="FormDiv">
         <Background />
-        <h2>Welcome to social media website</h2>
+
+        <h1>U4(i)A</h1>
         <form onSubmit={this.handleSubmit} className="SignupForm">
-          <h1>S i g n U p ! </h1>
-          <label>username</label>
+          <h1>Sign Up! </h1>
+          <label>Username</label>
           <input
             type="text"
             name="username"
             value={this.state.username}
             onChange={this.handleChange}
           />
-          <label>password</label>
+          <label>Password</label>
           <input
             type="password"
             value={this.state.password}
             name="password"
             onChange={this.handleChange}
-            placeholder="✿✿✿✿✿✿✿✿✿✿✿✿✿"
+            placeholder="✿✿✿✿✿✿✿✿✿✿✿✿✿✿✿"
           />
           <input
             type="submit"
             className="RegisterSubmitButton"
             value="Welcome !"
           />
+          <p>Already have an account?</p>
+          <Link to="/login">Login!</Link>
         </form>
       </div>
     );
