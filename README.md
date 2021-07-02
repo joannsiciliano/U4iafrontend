@@ -43,7 +43,7 @@ const handleUpload = (e) => {
 
 # Demo
 
-[![void]](https://www.youtube.com/watch?v=lgmxN7gKfuo&t=2s " watch the U4iA demo on Youtube!")
+[![void]](https://www.youtube.com/watch?v=lgmxN7gKfuo&t=2s " watch the U4iA demo on YouTube!")
 
 # Status
 
