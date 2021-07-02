@@ -3,12 +3,17 @@
   font-family: "Gugi", cursive;
   cursor: crosshair;
 }
-
+a:hover {
+  color: rgba(164, 234, 252, 0.8);
+}
+.DefaultImage {
+  width: 150px;
+}
 form {
   display: flex;
   background-color: rgba(255, 255, 255, 0.8);
   flex-direction: column;
-  margin: 90px auto;
+  margin: 0px auto;
   width: 350px;
   align-items: center;
   text-shadow: 1px 1px 50px #fff, 1px 1px 5px rgb(255, 42, 227);
@@ -21,10 +26,21 @@ form {
 form input {
   margin: 10px;
   background-color: rgba(220, 187, 243, 0.733);
-  color: white;
+  color: rgb(185, 91, 223);
   border-radius: 1rem;
   padding: 5px;
   width: 170px;
+}
+form input:focus {
+  background-color: rgba(164, 234, 252, 0.8);
+  color: rgba(241, 52, 178, 0.3);
+  border-style: double;
+  border-color: rgb(255, 75, 135);
+  transition: all 1250ms cubic-bezier(0.19, 0.5, 0.1, 0.1);
+  outline-offset: 0px;
+}
+.LoginDiv {
+  margin-top: 100px;
 }
 .LoginDiv h1 {
   margin-top: 30px;
@@ -35,7 +51,18 @@ form input {
   color: white;
   text-shadow: 1px 1px 40px #fff, 1px 1px 10px rgb(42, 212, 255);
 }
-.FormDiv h1 {
+h3 {
+  text-shadow: 1px 1px 40px #fff, 1px 1px 10px rgb(255, 42, 42);
+}
+.Upload {
+  color: rgb(221, 158, 229);
+  text-shadow: 1px 1px 40px #fff, 1px 1px 10px rgb(42, 212, 255);
+}
+.SignupDiv {
+  margin-top: 100px;
+}
+
+.SignupDiv h1 {
   margin-top: 30px;
   font-size: 3.5rem;
   display: flex;
@@ -50,8 +77,10 @@ form input {
 .RegisterSubmitButton:hover {
   background-color: rgba(164, 234, 252, 0.8);
 }
+.LoginButton:hover {
+  background-color: rgba(164, 234, 252, 0.8);
+}
 .HomePage {
-  /* background-color: rgb(42, 212, 255, 0.5); */
   color: white;
   display: flex;
   flex-direction: row-reverse;
@@ -89,7 +118,8 @@ img:hover {
   text-align: center;
 }
 .SocialMediaFeed h1 {
-  margin: auto;
+  margin-top: 30px;
+  text-shadow: 1px 1px 40px #fff, 1px 1px 10px rgb(42, 212, 255);
 }
 
 .SMFormDiv {
@@ -98,18 +128,17 @@ img:hover {
 
 .SMForm {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   padding: 20px;
   width: 450px;
   height: 220px;
 }
-.LogoutButton {
-  margin-left: 250px;
 
-  border-radius: 0.5rem;
-}
 input {
   padding: 50px;
+}
+.UploadInput {
+  padding: 10px;
 }
 .p5-sketch {
   z-index: -2;
@@ -119,33 +148,62 @@ input {
   padding: 10px;
 }
 .SocialMediaPost {
-  background-color: rgba(200, 200, 250, 0.8);
+  background: linear-gradient(
+    -45deg,
+    rgba(250, 210, 250, 0.8),
+    rgba(200, 200, 250, 0.8)
+  );
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 1.5em;
   display: block;
-  box-shadow: 0px 0px 5px rgba(255, 255, 250, 0.8);
+  box-shadow: 0px 0px 10px rgba(2500, 210, 250, 0.8);
 }
 button {
-  border-color: rgba(200, 200, 250, 0.8);
+  border-color: rgba(255, 118, 244, 0.8);
 }
 .MessageInput {
-  background-color: rgba(87, 244, 255, 0.4);
+  background-color: rgba(255, 238, 0, 0.1);
   color: rgb(31, 143, 177);
   border-radius: 1.2em;
   border-color: rgb(221, 158, 229);
   padding: 10px;
 }
+.MessageInput:focus {
+  background-color: rgba(164, 234, 252, 0.2);
+  color: rgba(241, 52, 178, 0.3);
+  border-style: double;
+  border-color: rgb(255, 75, 135);
+  transition: all 1250ms cubic-bezier(0.19, 0.5, 0.1, 0.1);
+  outline-offset: 0px;
+}
+.LikeButton {
+  width: 45px;
+}
 .FeaturedImage {
-  width: 200px;
+  width: 250px;
   border: solid 2px rgb(221, 158, 229);
+  border-radius: 1em;
 }
 .SocialMediaContainer {
-  height: 30vh;
+  height: 35vh;
   overflow: auto;
 }
 .SMFormDiv img {
   width: 250;
+}
+progress {
+  border: 7px;
+  width: 80%;
+  height: 20px;
+  box-shadow: 1px 1px 1px rgba(164, 234, 252, 0.8);
+}
+progress::-webkit-progress-bar {
+  background-color: rgba(200, 200, 250, 0.8);
+  border-radius: 7px;
+}
+progress::-webkit-progress-value {
+  background: rgb(129, 211, 238);
 }
 ::-webkit-scrollbar {
   width: 12px;

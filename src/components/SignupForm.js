@@ -20,10 +20,10 @@ export default class SignupForm extends Component {
 
   render() {
     return (
-      <div className="FormDiv">
+      <div className="SignupDiv">
         <Background />
 
-        <h1>U4(i)A</h1>
+        <h1>--U4(i)A--</h1>
         <form onSubmit={this.handleSubmit} className="SignupForm">
           <h1>Sign Up! </h1>
           <label>Username</label>

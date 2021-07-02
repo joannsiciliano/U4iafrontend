@@ -1,4 +1,5 @@
 import React from "react";
+import like from "../images/like.png";
 
 export default function SocialMediaPost(props) {
   const handleClick = (e) => {
@@ -11,10 +12,9 @@ export default function SocialMediaPost(props) {
         <li> {props.post.message}</li>
         <img src={props.post.featured_image} className="FeaturedImage" />
         <li>
-          <button onClick={handleClick}> ☻</button>{" "}
+          <img src={like} onClick={handleClick} className="LikeButton" />
+          <h3>{props.post.likes}</h3>
         </li>
-
-        {props.post.likes}
       </ul>
     </div>
   );

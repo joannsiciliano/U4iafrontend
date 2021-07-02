@@ -43,19 +43,9 @@ export default class HomePage extends Component {
       });
   };
   addSMP = (smp) => {
-    fetch("http://localhost:3000/social_media_posts", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        social_media_post: smp,
-      }),
-    })
-      .then((response) => response.json())
-      .then((smp) =>
-        this.setState({
-          SMPosts: [...this.state.SMPosts, smp],
-        })
-      );
+    this.setState({
+      SMPosts: [...this.state.SMPosts, smp],
+    });
   };
 
   render() {

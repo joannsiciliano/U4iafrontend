@@ -28,6 +28,8 @@ export default function SMForm(props) {
       .then((SMP) => props.addPost(SMP));
 
     setMessage("");
+    setImage("");
+    setURL("");
   };
 
   const handleChange = (e) => {
@@ -83,15 +85,21 @@ export default function SMForm(props) {
         />
         <input
           type="file"
+          className=".UploadInput"
           accept="image/png, image/jpeg"
-          // value={featured_image.name}
           onChange={handleChange}
         ></input>
-        <button onClick={handleUpload}>upload image</button>
+        {image ? (
+          <h3 onClick={handleUpload} className="Upload">
+            Upload image
+          </h3>
+        ) : (
+          <p>✿ Please upload an image ✿</p>
+        )}
         {url ? (
           <input type="submit" />
         ) : (
-          <progress value={progress} max="100" />
+          <progress className="Progress" value={progress} max="100" />
         )}
       </form>
     </div>

@@ -14,7 +14,7 @@ export default function LoginForm({ login, error }) {
   return (
     <div className="LoginDiv">
       <Background />
-      <h1>U4(i)A</h1>
+      <h1>--U4(i)A--</h1>
 
       <form onSubmit={handleSubmit} className="LoginForm">
         <h1>Login!</h1>
@@ -33,7 +33,7 @@ export default function LoginForm({ login, error }) {
           placeholder="✿✿✿✿✿✿✿✿✿✿✿✿✿✿✿"
         />
         {error ? <p style={{ color: "red" }}>{error}</p> : null}
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" className="LoginButton" />
         <p>Don't have a login?</p>
         <Link to="/signup">Sign up!</Link>
       </form>
